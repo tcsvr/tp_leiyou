@@ -1,0 +1,29 @@
+
+  <!-- banner部分 -->
+  <div class="banner case">
+    <div class="title">
+      <p>成功案例</p>
+      <p class="en">Successful Case</p>
+    </div>
+  </div>
+  <!-- main部分 -->
+  <div class="main-case">
+    <div class="layui-container">
+      <div class="layui-row">
+        
+        {foreach $cases as $v}
+        <div class="layui-inline content">
+          <div class="layui-inline case-img"><img src="__IMG__{$v.c_img}"></div>
+          <p class="lable">名牌工厂店</p>
+          <p>一家工厂企业的商品展示网站，主要以卖高端服饰为主。主要以卖高端服饰为主。主要以卖高端服饰为主。</p>
+        </div>
+        {/foreach}
+        
+      </div>
+      <div class="text-center">
+        <link href="__CSS__bootstrap.min.css" rel="stylesheet">
+        {$page|raw}
+
+      </div>
+  </div>
+  <!-- footer部分 -->

@@ -1,0 +1,38 @@
+
+  <!-- banner部分 -->
+  <div class="banner about">
+    <div class="title">
+      <p>关于我们</p>
+      <p class="en">About Us</p>
+    </div>
+  </div>
+  <!-- main部分 -->
+  <div class="main-about">
+    <div class="layui-container">
+      <div class="layui-row">
+        <ul class="aboutab">
+
+          {foreach $about as $v}
+          <a href="{:url('index/about/index',['aid'=>$v.a_id])}/?nid={$nid}">
+          <li class="{if $aid==$v.a_id}layui-this{/if}">{$v.a_title}</li>
+          </a>
+          {/foreach}
+
+        </ul>
+
+        <div class="tabIntro">
+          {$about_detail.ad_detail|raw}
+        </div>
+<!-- tabJob -->
+        <div class="tabJob">
+            {$about_detail.ad_detail|raw}
+        </div>
+<!-- tabCour -->
+        <div class="tabCour">
+            {$about_detail.ad_detail|raw}
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- footer部分 -->

@@ -1,0 +1,36 @@
+  <!-- banner部分 -->
+  <div class="banner news">
+    <div class="title">
+      <p>实时新闻</p>
+      <p class="en">Real-time News</p>
+    </div>
+  </div>
+  <!-- main -->
+  <div class="main-news">
+    <div class="layui-container">
+      <div class="layui-row layui-col-space20">
+        {foreach $news as $v}
+        <div class="layui-col-lg6 content">
+          <div>
+            <div class="news-img"><a href="newsDetail.html"><img src="__IMG__news_img1.jpg"></a></div><div class="news-panel">
+              <strong><a href="newsDetail.html">{$v.n_title}</a></strong>
+              <p class="detail"><span>{$v.n_id}{$v.n_txt|substr=0,180}</span><a href="newsDetail.html">[详细]</a></p>
+              <p class="read-push">阅读 <span>120</span>&nbsp;&nbsp;&nbsp;&nbsp;发布时间：<span>2018-06-21</span></p>
+            </div>
+          </div>
+        </div>
+        {/foreach}
+
+
+
+
+
+      </div>
+      <div class="text-center">
+            <link href="__CSS__bootstrap.min.css" rel="stylesheet">
+            {$page|raw}
+
+      </div>
+    </div>
+  </div>
+  <!-- footer部分 -->
